@@ -12,7 +12,7 @@ const io = new Server({
     methods: ["GET", "POST"],
   },
 });
-// ver video del snake game en youtube para levantar puerto 8080
+// npx live server
 
 const state = {};
 let clientRooms = {};
@@ -37,7 +37,6 @@ io.on("connection", (client) => {
   client.on("onePlayerUpdate", handleOnePlayerUpdate);
 
   function handleOnePlayerUpdate(data) {
-    // console.log(data);
     state[data.room].rounds = data.rounds;
     state[data.room].players[0].errors = data.errors;
     // if (state.rounds > 3) {
@@ -76,10 +75,8 @@ io.on("connection", (client) => {
     state[gameCode] = multiPlayerScoreGameState();
     client.join(gameCode);
     client.number = 2;
-    // console.log("state multiplayer", state);
     // console.log("clientRooms", clientRooms);
     // console.log("state players", state[gameCode].players);
-    // console.log("gameCode", gameCode);
 
     for (let client in clientRooms) {
       // console.log(`${client}: ${clientRooms[client]}`);
@@ -177,11 +174,8 @@ io.on("connection", (client) => {
         io.to(client).emit("gameTied");
       }
     }
-    // console.log("state al terminar el juego", state);
-    // console.log("clientRooms al terminar el juego", clientRooms);
     state[data.room].players = [];
     state[data.room] = {};
-    // clientRooms = {};
     // console.log("clientRooms una vez inicializado al terminar", clientRooms);
   }
 
