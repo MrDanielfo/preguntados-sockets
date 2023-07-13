@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Preguntados</title>
+</head>
+<body>
+  <header class="main-header">
+    <h1 class="header-title">Comenzar a Jugar</h1>
+    <span class="game-code"></span>
+    <input class="input-code" type="text" id="code-input" value='' placeholder="Introduce el código">
+    <button id="join-game" class="join-game">Únete</button>
+  </header>
+  <main class="general-container">
+    <div class="players-container">
+      <div class="player-stats-container">
+        <span class="player-name">Jugador 1</span>
+        <span class="player-points-one">Puntos: 0</span>
+        <span class="player-mistakes-one">Errores: 0</span>
+      </div>
+      <div class="player-stats-container player-two">
+        <span class="player-name">Jugador 2</span>
+        <span class="player-points-two">Puntos: 0</span>
+        <span class="player-mistakes-two">Errores: 0</span>
+      </div>
+    </div>
+    
+    <div class="marker"></div>
+    <div class="square-container">
+      <div data-category="geografía" class="standard square-one geografía"></div>
+      <div data-category="historia" class="standard square-two historia"></div>
+      <div data-category="arte" class="standard square-three arte"></div>
+      <div data-category="ciencia" class="standard square-four ciencia"></div>
+      <div data-category="entretenimiento" class="standard square-five entretenimiento"></div>
+      <div data-category="deportes" class="standard square-six deportes"></div>
+    </div>
+    <div class="options-container">
+      <div class="rules">Reglas</div>
+      <div class="category-container">
+        <span class="color-category geo"></span>
+        <span class="name-category">Geografía</span>
+      </div>
+      <div class="category-container">
+        <span class="color-category his"></span>
+        <span class="name-category">Historia</span>
+      </div>
+      <div class="category-container">
+        <span class="color-category art"></span>
+        <span class="name-category">Arte</span>
+      </div>
+      <div class="category-container">
+        <span class="color-category dep"></span>
+        <span class="name-category">Deportes</span>
+      </div>
+      <div class="category-container">
+        <span class="color-category ent"></span>
+        <span class="name-category">Entretenimiento</span>
+      </div>
+      <div class="category-container">
+        <span class="color-category cie"></span>
+        <span class="name-category">Ciencia</span>
+      </div>
+    </div>
+  </main>
+  <div class="question-container">
+  </div>
+  <div class="final-result-container">
+    
+  </div>
+
+  <script src="https://cdn.socket.io/4.4.0/socket.io.min.js" integrity="sha384-1fOn6VtTq3PWwfsOrk45LnYcGosJwzMHv+Xh/Jx5303FVOXzEnw0EpLv30mtjmlj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

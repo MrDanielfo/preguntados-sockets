@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "categoria": "geografía"
+  },
+  {
+    "id": 2,
+    "categoria": "historia"
+  },
+  {
+    "id": 3,
+    "categoria": "arte"
+  },
+  {
+    "id": 4,
+    "categoria": "ciencia"
+  },
+  {
+    "id": 5,
+    "categoria": "entretenimiento"
+  },
+  {
+    "id": 6,
+    "categoria": "deportes"
+  }
+]
